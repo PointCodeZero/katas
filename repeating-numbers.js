@@ -2,12 +2,12 @@ var repeatNumbers = function(data) {
   var result = [];
   if (data.length > 1) {
     var count = 0;
-    var num = []
+    var num = [];
     while(count < data.length) {
       for (var i = 0; i < data[count][1]; i++) {
         num += data[count][0].toString();
       }
-      if(count >= 0 && count < data.length -1) {
+      if(count < data.length -1) {
         num += ", ";
       }
       count++;
