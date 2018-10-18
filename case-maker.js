@@ -1,16 +1,10 @@
 var camelCase = function(input) {
-  var newString = "";
-  var s = input.replace(/\b\w/g, l => l.toUpperCase());
-  var lStr = s[0].toLowerCase() + s.slice(1);
-  var regex = / /gi;
-  for (var i = 0; i < lStr.length; i++) {
-    if (lStr[i] === ' ') {
-      newString += lStr[i].replace(regex, '');
-    } else {
-      newString += lStr[i];
-    }
+  input = input.split(' ');
+  for (var i = 0; i < input.length; i++) {
+    input[i] = input[i].charAt(0).toUpperCase() + input[i].slice(1);
   }
-  return newString;
+  str = input.join('');
+  return str.charAt(0).toLowerCase() + str.slice(1);
 };
 
 console.log(camelCase("this is a string"));  // thisIsAString
@@ -30,3 +24,19 @@ console.log(camelCase("supercalifragalisticexpialidocious")); // supercalifragal
 // titleCase("I'm a little tea pot");
 
 //=================================================================
+//FIRST SOLUTION
+
+// var camelCase = function(input) {
+  // var newString = "";
+  // var s = input.replace(/\b\w/g, l => l.toUpperCase());
+  // var lStr = s[0].toLowerCase() + s.slice(1);
+  // var regex = / /gi;
+  // for (var i = 0; i < lStr.length; i++) {
+  //   if (lStr[i] === ' ') {
+  //     newString += lStr[i].replace(regex, '');
+  //   } else {
+  //     newString += lStr[i];
+  //   }
+  // }
+  // return newString;
+// };
