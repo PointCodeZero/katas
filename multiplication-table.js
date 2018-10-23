@@ -16,7 +16,7 @@ var splitRow = function(n) {
     if (i !== n) {
       sep += "+-----";
     } else {
-      sep += "+-----+"
+      sep += "+-----+";
     }
   }
   return sep + "\n";
@@ -24,7 +24,7 @@ var splitRow = function(n) {
 
 var addLeftSpace = function(y) {
   if(y === 1) {
-    return "| "
+    return "| ";
   } else {
     return "";
   }
@@ -40,7 +40,6 @@ var addRightSpace = function (x, y) {
     return " | ";
   }
 };
-
 
 console.log(multiplicationTable(1));
 console.log(multiplicationTable(5));
